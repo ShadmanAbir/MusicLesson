@@ -31,8 +31,7 @@ public partial class MusicLessonsDBContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Data Source=DESKTOP-4504LM0;Initial Catalog=MusicLessonsDB;Integrated Security=True;TrustServerCertificate=True" +
-            "");
+        => optionsBuilder.UseSqlServer("Data Source=DESKTOP-4504LM0;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -60,6 +59,10 @@ public partial class MusicLessonsDBContext : DbContext
             entity.Property(e => e.LetterID).HasColumnOrder(6);
             entity.Property(e => e.StudentID).HasColumnOrder(1);
             entity.Property(e => e.TutorID).HasColumnOrder(3);
+            entity.Property(e => e.Term).HasColumnOrder(8);
+            entity.Property(e => e.TermStartDate).HasColumnOrder(11);
+            entity.Property(e => e.Semester).HasColumnOrder(9);
+            entity.Property(e => e.Year).HasColumnOrder(10);
 
             entity.HasOne(d => d.Duration).WithMany(p => p.Lessons)
                 .OnDelete(DeleteBehavior.ClientSetNull)
@@ -89,12 +92,10 @@ public partial class MusicLessonsDBContext : DbContext
             entity.Property(e => e.BeginningComment).HasColumnOrder(3);
             entity.Property(e => e.PaymentStatus).HasColumnOrder(2);
             entity.Property(e => e.Reference).HasColumnOrder(1);
-            entity.Property(e => e.Semester).HasColumnOrder(9);
+            
             entity.Property(e => e.Signature).HasColumnOrder(4);
-            entity.Property(e => e.Term).HasColumnOrder(8);
-            entity.Property(e => e.TermStartDate).HasColumnOrder(11);
             entity.Property(e => e.TotalCost).HasColumnOrder(12);
-            entity.Property(e => e.Year).HasColumnOrder(10);
+            
         });
 
         modelBuilder.Entity<Students>(entity =>

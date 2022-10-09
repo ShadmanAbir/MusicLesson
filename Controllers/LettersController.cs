@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MusicLesson.Models;
+using Newtonsoft.Json;
 
 namespace MusicLesson.Controllers
 {
@@ -41,7 +42,12 @@ namespace MusicLesson.Controllers
 
             return View(letters);
         }
-
+        [HttpPost]
+        public IActionResult DetailData(List<Lessons> lessons)
+        {
+            TempData["LessonDetails"] = TempData["PopupMessages"] = JsonConvert.SerializeObject(lessons.Where(a => a.isChecked == true).ToList());
+            return RedirectToAction("Create");
+        }
         // GET: Letters/Create
         public IActionResult Create()
         {
@@ -53,7 +59,7 @@ namespace MusicLesson.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("LetterID,Reference,PaymentStatus,BeginningComment,Signature,BankAccount,BSB,AccountNo,Term,Semester,Year,TermStartDate,TotalCost")] Letters letters)
+        public async Task<IActionResult> Create([Bind("LetterID,Reference,PaymentStatus,BeginningComment,Signature,BankAccount,BSB,AccountNo,TotalCost")] Letters letters)
         {
             if (ModelState.IsValid)
             {
@@ -85,7 +91,7 @@ namespace MusicLesson.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("LetterID,Reference,PaymentStatus,BeginningComment,Signature,BankAccount,BSB,AccountNo,Term,Semester,Year,TermStartDate,TotalCost")] Letters letters)
+        public async Task<IActionResult> Edit(int id, [Bind("LetterID,Reference,PaymentStatus,BeginningComment,Signature,BankAccount,BSB,AccountNo,TotalCost")] Letters letters)
         {
             if (id != letters.LetterID)
             {

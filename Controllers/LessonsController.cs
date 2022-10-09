@@ -47,7 +47,6 @@ namespace MusicLesson.Controllers
 
             return View(lessons);
         }
-
         public async Task<IActionResult> DetailsByStudentID(int? id)
         {
             if (id == null || _context.Lessons == null)
@@ -74,14 +73,18 @@ namespace MusicLesson.Controllers
 
             return View(lessons);
         }
-
         // GET: Lessons/Create
-        public IActionResult Create()
+        public async Task<IActionResult> CreateAsync()
         {
             ViewData["DurationID"] = new SelectList(_context.Duration, "DurationID", "Length");
             ViewData["InstrumentID"] = new SelectList(_context.Instrument, "InstrumentID", "InstrumentName");
             ViewData["LetterID"] = new SelectList(_context.Letters, "LetterID", "AccountNo");
-            ViewData["StudentID"] = new SelectList(_context.Students, "StudentID", "Email");
+            var data = new SelectList(_context.Students, "StudentID", "FirstName");
+            foreach (var item in data)
+            {
+                item.Text += " " + (await _context.Students.SingleOrDefaultAsync(a => a.StudentID.ToString() == item.Value)).LastName;
+            }
+            ViewData["StudentID"] = data;
             ViewData["TutorID"] = new SelectList(_context.Tutors, "TutorID", "TutorName");
             return View();
         }
@@ -91,7 +94,7 @@ namespace MusicLesson.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("LessonID,StudentID,InstrumentID,TutorID,DurationID,LessonDateTime,LetterID")] Lessons lessons)
+        public async Task<IActionResult> Create([Bind("LessonID,StudentID,InstrumentID,TutorID,DurationID,LessonDateTime,LetterID,Term,Semester,Year,TermStartDate")] Lessons lessons)
         {
             if (ModelState.IsValid)
             {
@@ -133,7 +136,7 @@ namespace MusicLesson.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("LessonID,StudentID,InstrumentID,TutorID,DurationID,LessonDateTime,LetterID")] Lessons lessons)
+        public async Task<IActionResult> Edit(int id, [Bind("LessonID,StudentID,InstrumentID,TutorID,DurationID,LessonDateTime,LetterID,Term,Semester,Year,TermStartDate")] Lessons lessons)
         {
             if (id != lessons.LessonID)
             {

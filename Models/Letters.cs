@@ -39,20 +39,11 @@ public partial class Letters
     [StringLength(30)]
     public string AccountNo { get; set; }
 
-    public int Term { get; set; }
-
-    public int Semester { get; set; }
-
-    [Required]
-    [StringLength(4)]
-    public string Year { get; set; }
-
-    [Column(TypeName = "datetime")]
-    public DateTime TermStartDate { get; set; }
-
     [Column(TypeName = "decimal(18, 0)")]
     public decimal TotalCost { get; set; }
 
     [InverseProperty("Letter")]
     public virtual ICollection<Lessons> Lessons { get; } = new List<Lessons>();
+    [NotMapped]
+    public List<Lessons>? LessonList { get; set; }
 }

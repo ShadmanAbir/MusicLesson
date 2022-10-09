@@ -46,8 +46,16 @@ public partial class Lessons
     [ForeignKey("TutorID")]
     [InverseProperty("Lessons")]
     public virtual Tutors Tutor { get; set; }
+    public int Term { get; set; }
+
+    public int Semester { get; set; }
+
+    [Required]
+    [StringLength(4)]
+    public string Year { get; set; }
+
+    [Column(TypeName = "datetime")]
+    public DateTime TermStartDate { get; set; }
     [NotMapped]
     public bool isChecked { get; set; }
-    [NotMapped]
-    public string InstrumentName { get; set; }
 }
