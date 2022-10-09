@@ -281,14 +281,6 @@ C:\Users\Shadman Sakib\source\repos\MusicLesson\obj\Debug\net6.0\refint\MusicLes
 C:\Users\Shadman Sakib\source\repos\MusicLesson\obj\Debug\net6.0\MusicLesson.pdb
 C:\Users\Shadman Sakib\source\repos\MusicLesson\obj\Debug\net6.0\MusicLesson.genruntimeconfig.cache
 C:\Users\Shadman Sakib\source\repos\MusicLesson\obj\Debug\net6.0\ref\MusicLesson.dll
-C:\Repo\MusicLesson\obj\Debug\net6.0\MusicLesson.csproj.AssemblyReference.cache
-C:\Repo\MusicLesson\obj\Debug\net6.0\MusicLesson.GeneratedMSBuildEditorConfig.editorconfig
-C:\Repo\MusicLesson\obj\Debug\net6.0\MusicLesson.AssemblyInfoInputs.cache
-C:\Repo\MusicLesson\obj\Debug\net6.0\MusicLesson.AssemblyInfo.cs
-C:\Repo\MusicLesson\obj\Debug\net6.0\MusicLesson.csproj.CoreCompileInputs.cache
-C:\Repo\MusicLesson\obj\Debug\net6.0\MusicLesson.MvcApplicationPartsAssemblyInfo.cache
-C:\Repo\MusicLesson\obj\Debug\net6.0\MusicLesson.RazorAssemblyInfo.cache
-C:\Repo\MusicLesson\obj\Debug\net6.0\MusicLesson.RazorAssemblyInfo.cs
 C:\Repo\MusicLesson\bin\Debug\net6.0\appsettings.Development.json
 C:\Repo\MusicLesson\bin\Debug\net6.0\appsettings.json
 C:\Repo\MusicLesson\bin\Debug\net6.0\efpt.config.json
@@ -534,6 +526,14 @@ C:\Repo\MusicLesson\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Comm
 C:\Repo\MusicLesson\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Repo\MusicLesson\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Repo\MusicLesson\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Repo\MusicLesson\obj\Debug\net6.0\MusicLesson.csproj.AssemblyReference.cache
+C:\Repo\MusicLesson\obj\Debug\net6.0\MusicLesson.GeneratedMSBuildEditorConfig.editorconfig
+C:\Repo\MusicLesson\obj\Debug\net6.0\MusicLesson.AssemblyInfoInputs.cache
+C:\Repo\MusicLesson\obj\Debug\net6.0\MusicLesson.AssemblyInfo.cs
+C:\Repo\MusicLesson\obj\Debug\net6.0\MusicLesson.csproj.CoreCompileInputs.cache
+C:\Repo\MusicLesson\obj\Debug\net6.0\MusicLesson.MvcApplicationPartsAssemblyInfo.cache
+C:\Repo\MusicLesson\obj\Debug\net6.0\MusicLesson.RazorAssemblyInfo.cache
+C:\Repo\MusicLesson\obj\Debug\net6.0\MusicLesson.RazorAssemblyInfo.cs
 C:\Repo\MusicLesson\obj\Debug\net6.0\staticwebassets\msbuild.MusicLesson.Microsoft.AspNetCore.StaticWebAssets.props
 C:\Repo\MusicLesson\obj\Debug\net6.0\staticwebassets\msbuild.build.MusicLesson.props
 C:\Repo\MusicLesson\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.MusicLesson.props

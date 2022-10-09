@@ -42,8 +42,8 @@ namespace MusicLesson.Controllers
 
             return View(letters);
         }
-        [HttpPost]
-        public IActionResult DetailData(List<Lessons> lessons)
+        
+        public IActionResult DetailData([FromForm] List<Lessons> lessons)
         {
             TempData["LessonDetails"] = TempData["PopupMessages"] = JsonConvert.SerializeObject(lessons.Where(a => a.isChecked == true).ToList());
             return RedirectToAction("Create");

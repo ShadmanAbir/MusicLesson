@@ -1,11 +1,11 @@
-﻿@model IEnumerable<MusicLesson.Models.Lessons>
+﻿@model IList<MusicLesson.Models.Lessons>
 
 @{
     ViewData["Title"] = "Index";
 }
 
-@using (@Html.BeginForm("DetailData", "Letters", FormMethod.Post))
-            {
+@using (Html.BeginForm("DetailData", "Letters", FormMethod.Post))
+ {
     
     <table class="table">
         <thead>
@@ -14,81 +14,91 @@
 
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Student)
+                    @Html.DisplayNameFor(model => model[0].Student)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Instrument)
+                    @Html.DisplayNameFor(model => model[0].Instrument)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Tutor)
+                    @Html.DisplayNameFor(model => model[0].Tutor)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Term)
+                    @Html.DisplayNameFor(model => model[0].Term)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Year)
+                    @Html.DisplayNameFor(model => model[0].Year)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.LessonDateTime)
+                    @Html.DisplayNameFor(model => model[0].LessonDateTime)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Duration)
+                    @Html.DisplayNameFor(model => model[0].Duration)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Letter.PaymentStatus)
+                    @Html.DisplayNameFor(model => model[0].Letter.PaymentStatus)
                 </th>
 
             </tr>
         </thead>
         <tbody>
-            @foreach (var item in Model)
+            @for (var i = 0; i < Model.Count(); i++)
             {
                 <tr>
+                    @Html.HiddenFor(modelItem => Model[i].LessonID)
                     <th>
                         @{
-                            item.isChecked = false;
-                                @Html.CheckBoxFor(modelItem => item.isChecked)
+                            Model[i].isChecked = false;
+                                @Html.CheckBoxFor(modelItem => Model[i].isChecked)
+                                @Html.HiddenFor(modelItem => Model[i].isChecked)
                         }
 
                     </th>
                     <td>
                         @{
-                            var Name = item.Student.FirstName + " " + item.Student.LastName;
+                            var Name = Model[i].Student.FirstName + " " + Model[i].Student.LastName;
                                 @Html.DisplayFor(modelItem => Name)
+                            @Html.HiddenFor(modelItem => Model[i].StudentID)
                         }
 
                     </td>
 
                     <td>
-                        @Html.DisplayFor(modelItem => item.Instrument.InstrumentName)
+                        @Html.DisplayFor(modelItem => Model[i].Instrument.InstrumentName)
+                        @Html.HiddenFor(modelItem => Model[i].InstrumentID)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.Tutor.TutorName)
+                        @Html.DisplayFor(modelItem => Model[i].Tutor.TutorName)
+                        @Html.DisplayFor(modelItem => Model[i].TutorID)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.Term)
+                        @Html.DisplayFor(modelItem => Model[i].Term)
+                        @Html.HiddenFor(modelItem => Model[i].Term)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.Year)
+                        @Html.DisplayFor(modelItem => Model[i].Year)
+                        @Html.HiddenFor(modelItem => Model[i].Year)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.LessonDateTime)
+                        @Html.DisplayFor(modelItem => Model[i].LessonDateTime)
+                        @Html.HiddenFor(modelItem => Model[i].Year)
                     </td>
                     <td>
                         @{
-                            var Duration = item.Duration.Length + " (Cost: " + item.Duration.Cost + ")";
+                            var Duration = Model[i].Duration.Length + " (Cost: " + Model[i].Duration.Cost + ")";
                                 @Html.DisplayFor(modelItem => Duration)
+                            @Html.HiddenFor(modelItem => Model[i].DurationID)
                         }
                     </td>
                     <td>
                         @{
                             var PaymentStatus = "Not Paid";
-                            if (item.LetterID != null)
+                            if (Model[i].LetterID != null)
                             {
-                                if (item.Letter.PaymentStatus)
+                                if (Model[i].Letter.PaymentStatus)
                                     PaymentStatus = "Paid";
                             }
                                 @Html.DisplayFor(modelItem => PaymentStatus)
+                            
                         }
                     </td>
                 </tr>
@@ -98,6 +108,7 @@
     
 
     <div class="form-group">
-        <input type="submit" value="Create" class="btn btn-primary" />
+        <input type="submit" value="Submit" class="btn btn-primary" />
     </div>
 }
+
