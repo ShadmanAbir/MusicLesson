@@ -62,10 +62,6 @@ namespace MusicLesson.Controllers
                 .Include(l => l.Student)
                 .Include(l => l.Tutor)
                 .Where(m => m.StudentID == id).ToListAsync();
-            foreach (var item in lessons)
-            {
-                item.isChecked = false;
-            }
             if (lessons == null)
             {
                 return NotFound();

@@ -44,6 +44,4 @@ public partial class Letters
 
     [InverseProperty("Letter")]
     public virtual ICollection<Lessons> Lessons { get; } = new List<Lessons>();
-    [NotMapped]
-    public List<Lessons>? LessonList { get; set; }
 }

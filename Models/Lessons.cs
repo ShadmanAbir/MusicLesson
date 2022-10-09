@@ -58,4 +58,16 @@ public partial class Lessons
     public DateTime TermStartDate { get; set; }
     [NotMapped]
     public bool isChecked { get; set; }
+    [NotMapped]
+    public virtual Tutors TutorData { get; set; }
+    [NotMapped]
+    public virtual Students StudentData { get; set; }
+    
+    [NotMapped]
+    public virtual Instrument InstrumentData { get; set; }
+    [NotMapped]
+    public virtual Duration DurationData { get; set; }
+    [NotMapped]
+    public virtual Letters? LetterData { get; set; }
+
 }

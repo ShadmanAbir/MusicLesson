@@ -68,11 +68,15 @@
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => Model[i].Tutor.TutorName)
-                        @Html.DisplayFor(modelItem => Model[i].TutorID)
+                        @Html.HiddenFor(modelItem => Model[i].TutorID)
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => Model[i].Term)
                         @Html.HiddenFor(modelItem => Model[i].Term)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => Model[i].Semester)
+                        @Html.HiddenFor(modelItem => Model[i].Semester)
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => Model[i].Year)
@@ -80,7 +84,7 @@
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => Model[i].LessonDateTime)
-                        @Html.HiddenFor(modelItem => Model[i].Year)
+                        @Html.HiddenFor(modelItem => Model[i].LessonDateTime)
                     </td>
                     <td>
                         @{

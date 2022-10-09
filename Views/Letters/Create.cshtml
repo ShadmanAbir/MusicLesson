@@ -1,24 +1,27 @@
-﻿@model MusicLesson.Models.Letters
+﻿@using Newtonsoft.Json
+@model MusicLesson.Models.Letters
+
 
 @{
     ViewData["Title"] = "Create";
+
+    decimal TotalCost = Convert.ToDecimal(0);
+    var LessonList = new List<Lessons>();
 }
 
-<h1>Create</h1>
+
+<h1>test</h1>
 <hr />
+
 <div class="row">
+    
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Reference" class="control-label"></label>
-                <input asp-for="Reference" class="form-control" />
-                <span asp-validation-for="Reference" class="text-danger"></span>
-            </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="PaymentStatus" /> @Html.DisplayNameFor(model => model.PaymentStatus)
-                </label>
+                <input class="form-control" type="checkbox" id="toggle-pay" asp-for="PaymentStatus" data-toggle="toggle">
+                <label asp-for="PaymentStatus" class="control-label"></label>
+                
             </div>
             <div class="form-group">
                 <label asp-for="BeginningComment" class="control-label"></label>
@@ -45,49 +48,94 @@
                 <input asp-for="AccountNo" class="form-control" />
                 <span asp-validation-for="AccountNo" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="TotalCost" class="control-label"></label>
-                <input asp-for="TotalCost" class="form-control" />
-                <span asp-validation-for="TotalCost" class="text-danger"></span>
-            </div>
 
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>
-                            @Html.DisplayText("LessonDateTime")
-                        </th>
-                        <th>
-                            @Html.DisplayText("Duration")
-                        </th>
-                        <th>
-                            @Html.DisplayText("Instrument")
-                        </th>
-                        <th>
-                            @Html.DisplayText("StudentName")
-                        </th>
-                        <th>
-                            @Html.DisplayText("Tutor")
-                        </th>
-                        <th>
-                            @Html.DisplayText("Instrument")
-                        </th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    
-                    @Html.Raw(TempData["LessonDetails"])
-
-                </tbody>
-            </table>
-
+            <input type="Hidden" asp-for="TotalCost" value="@TotalCost" class="form-control" />
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
-        </form>
+    </form>
     </div>
+
+    
+    <div class="col-md-8">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        Instrument
+                    </th>
+                    <th>
+                        Tutor
+                    </th>
+                    <th>
+                        Duration
+                    </th>
+                    <th>
+                        Lesson Date
+                    </th>
+                    <th>
+                        Term
+                    </th>
+                    <th>
+                        Semester
+                    </th>
+                    <th>
+                        year
+                    </th>
+                    <th>
+                        TermStartDate
+                    </th>
+                    <th>
+                        Cost
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (TempData["LessonDetails"] != null)
+                {
+                    
+                     LessonList = JsonConvert.DeserializeObject<List<Lessons>>(TempData["LessonDetails"].ToString());
+                    @foreach (var item in LessonList)
+                    {
+                            TotalCost += item.Duration.Cost;
+                            <tr>
+                            <td>
+                                @item.Instrument.InstrumentName
+                            </td>
+                            <td>
+                                @item.Tutor.TutorName
+                            </td>
+                            <td>
+                                @item.Duration.Length
+                            </td>
+                            <td>
+                                @item.LessonDateTime.ToShortDateString()
+                            </td>
+                            <td>
+                                @item.Term
+                            </td>
+                            <td>
+                                @item.Semester
+                            </td>
+                            <td>
+                                @item.Year
+                            </td>
+                            <td>
+                                @item.TermStartDate.ToShortDateString()
+                            </td>
+                            <td>
+                                @item.Duration.Cost
+                            </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+
+    </div>
+        
 </div>
+
 
 <div>
     <a asp-action="Index">Back to List</a>
@@ -95,4 +143,14 @@
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    
+
+    <script>
+        $(function () {
+            $('#toggle-pay').bootstrapToggle({
+                on: 'Enabled',
+                off: 'Disabled'
+            });
+        })
+    </script>
 }
