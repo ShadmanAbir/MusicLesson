@@ -10242,11 +10242,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Shadman Sakib\\source\\repos\\MusicLesson\\MusicLesson.csproj",
+      "projectUniqueName": "C:\\Repo\\MusicLesson\\MusicLesson.csproj",
       "projectName": "MusicLesson",
-      "projectPath": "C:\\Users\\Shadman Sakib\\source\\repos\\MusicLesson\\MusicLesson.csproj",
+      "projectPath": "C:\\Repo\\MusicLesson\\MusicLesson.csproj",
       "packagesPath": "C:\\Users\\Shadman Sakib\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Shadman Sakib\\source\\repos\\MusicLesson\\obj\\",
+      "outputPath": "C:\\Repo\\MusicLesson\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Shadman Sakib\\AppData\\Roaming\\NuGet\\NuGet.Config",

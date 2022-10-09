@@ -46,4 +46,8 @@ public partial class Lessons
     [ForeignKey("TutorID")]
     [InverseProperty("Lessons")]
     public virtual Tutors Tutor { get; set; }
+    [NotMapped]
+    public bool isChecked { get; set; }
+    [NotMapped]
+    public string InstrumentName { get; set; }
 }

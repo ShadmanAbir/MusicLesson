@@ -48,6 +48,33 @@ namespace MusicLesson.Controllers
             return View(lessons);
         }
 
+        public async Task<IActionResult> DetailsByStudentID(int? id)
+        {
+            if (id == null || _context.Lessons == null)
+            {
+                return NotFound();
+            }
+
+            var lessons = await _context.Lessons
+                .Include(l => l.Student)
+                .Include(l => l.Duration)
+                .Include(l => l.Instrument)
+                .Include(l => l.Letter)
+                .Include(l => l.Student)
+                .Include(l => l.Tutor)
+                .Where(m => m.StudentID == id).ToListAsync();
+            foreach (var item in lessons)
+            {
+                item.isChecked = false;
+            }
+            if (lessons == null)
+            {
+                return NotFound();
+            }
+
+            return View(lessons);
+        }
+
         // GET: Lessons/Create
         public IActionResult Create()
         {

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Lw9YuwvqhxzwO3Sj8mdJHa+GKqxsuL5YCo5yK/ThgM0/hEy6bXOUatrEGomHC8dpVrrrpsEcUnG1B/aUfErN6g==",
+  "dgSpecHash": "5nZSw+01uaHp8+ujiPdbX+V8RZjejvltGE6aYUsL28Rs+nN+LrAyiJ63bgrNCcRHQBaEyebW8K0VdQcVTpfzlw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Shadman Sakib\\source\\repos\\MusicLesson\\MusicLesson.csproj",
+  "projectFilePath": "C:\\Repo\\MusicLesson\\MusicLesson.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Shadman Sakib\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Shadman Sakib\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

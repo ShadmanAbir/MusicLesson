@@ -8,157 +8,161 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MusicLesson
 build_property.RootNamespace = MusicLesson
-build_property.ProjectDir = C:\Users\Shadman Sakib\source\repos\MusicLesson\
+build_property.ProjectDir = C:\Repo\MusicLesson\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Shadman Sakib\source\repos\MusicLesson
+build_property.MSBuildProjectDirectory = C:\Repo\MusicLesson
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Shadman Sakib/source/repos/MusicLesson/Views/Durations/Create.cshtml]
+[C:/Repo/MusicLesson/Views/Durations/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRHVyYXRpb25zXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Shadman Sakib/source/repos/MusicLesson/Views/Durations/Delete.cshtml]
+[C:/Repo/MusicLesson/Views/Durations/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRHVyYXRpb25zXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Shadman Sakib/source/repos/MusicLesson/Views/Durations/Details.cshtml]
+[C:/Repo/MusicLesson/Views/Durations/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRHVyYXRpb25zXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Shadman Sakib/source/repos/MusicLesson/Views/Durations/Edit.cshtml]
+[C:/Repo/MusicLesson/Views/Durations/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRHVyYXRpb25zXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Shadman Sakib/source/repos/MusicLesson/Views/Durations/Index.cshtml]
+[C:/Repo/MusicLesson/Views/Durations/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRHVyYXRpb25zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Shadman Sakib/source/repos/MusicLesson/Views/Home/Index.cshtml]
+[C:/Repo/MusicLesson/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Shadman Sakib/source/repos/MusicLesson/Views/Home/Privacy.cshtml]
+[C:/Repo/MusicLesson/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Shadman Sakib/source/repos/MusicLesson/Views/Instruments/Create.cshtml]
+[C:/Repo/MusicLesson/Views/Instruments/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zdHJ1bWVudHNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Shadman Sakib/source/repos/MusicLesson/Views/Instruments/Delete.cshtml]
+[C:/Repo/MusicLesson/Views/Instruments/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zdHJ1bWVudHNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Shadman Sakib/source/repos/MusicLesson/Views/Instruments/Details.cshtml]
+[C:/Repo/MusicLesson/Views/Instruments/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zdHJ1bWVudHNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Shadman Sakib/source/repos/MusicLesson/Views/Instruments/Edit.cshtml]
+[C:/Repo/MusicLesson/Views/Instruments/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zdHJ1bWVudHNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Shadman Sakib/source/repos/MusicLesson/Views/Instruments/Index.cshtml]
+[C:/Repo/MusicLesson/Views/Instruments/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zdHJ1bWVudHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Shadman Sakib/source/repos/MusicLesson/Views/Lessons/Create.cshtml]
+[C:/Repo/MusicLesson/Views/Lessons/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVzc29uc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Shadman Sakib/source/repos/MusicLesson/Views/Lessons/Delete.cshtml]
+[C:/Repo/MusicLesson/Views/Lessons/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVzc29uc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Shadman Sakib/source/repos/MusicLesson/Views/Lessons/Details.cshtml]
+[C:/Repo/MusicLesson/Views/Lessons/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVzc29uc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Shadman Sakib/source/repos/MusicLesson/Views/Lessons/Edit.cshtml]
+[C:/Repo/MusicLesson/Views/Lessons/DetailsByStudentID.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVzc29uc1xEZXRhaWxzQnlTdHVkZW50SUQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Repo/MusicLesson/Views/Lessons/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVzc29uc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Shadman Sakib/source/repos/MusicLesson/Views/Lessons/Index.cshtml]
+[C:/Repo/MusicLesson/Views/Lessons/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVzc29uc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Shadman Sakib/source/repos/MusicLesson/Views/Letters/Create.cshtml]
+[C:/Repo/MusicLesson/Views/Letters/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGV0dGVyc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Shadman Sakib/source/repos/MusicLesson/Views/Letters/Delete.cshtml]
+[C:/Repo/MusicLesson/Views/Letters/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGV0dGVyc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Shadman Sakib/source/repos/MusicLesson/Views/Letters/Details.cshtml]
+[C:/Repo/MusicLesson/Views/Letters/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGV0dGVyc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Shadman Sakib/source/repos/MusicLesson/Views/Letters/Edit.cshtml]
+[C:/Repo/MusicLesson/Views/Letters/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGV0dGVyc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Shadman Sakib/source/repos/MusicLesson/Views/Letters/Index.cshtml]
+[C:/Repo/MusicLesson/Views/Letters/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGV0dGVyc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Shadman Sakib/source/repos/MusicLesson/Views/Shared/Error.cshtml]
+[C:/Repo/MusicLesson/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Shadman Sakib/source/repos/MusicLesson/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Repo/MusicLesson/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Shadman Sakib/source/repos/MusicLesson/Views/Students/Create.cshtml]
+[C:/Repo/MusicLesson/Views/Students/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudHNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Shadman Sakib/source/repos/MusicLesson/Views/Students/Delete.cshtml]
+[C:/Repo/MusicLesson/Views/Students/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudHNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Shadman Sakib/source/repos/MusicLesson/Views/Students/Details.cshtml]
+[C:/Repo/MusicLesson/Views/Students/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudHNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Shadman Sakib/source/repos/MusicLesson/Views/Students/Edit.cshtml]
+[C:/Repo/MusicLesson/Views/Students/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudHNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Shadman Sakib/source/repos/MusicLesson/Views/Students/Index.cshtml]
+[C:/Repo/MusicLesson/Views/Students/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Shadman Sakib/source/repos/MusicLesson/Views/Tutors/Create.cshtml]
+[C:/Repo/MusicLesson/Views/Tutors/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHV0b3JzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Shadman Sakib/source/repos/MusicLesson/Views/Tutors/Delete.cshtml]
+[C:/Repo/MusicLesson/Views/Tutors/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHV0b3JzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Shadman Sakib/source/repos/MusicLesson/Views/Tutors/Details.cshtml]
+[C:/Repo/MusicLesson/Views/Tutors/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHV0b3JzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Shadman Sakib/source/repos/MusicLesson/Views/Tutors/Edit.cshtml]
+[C:/Repo/MusicLesson/Views/Tutors/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHV0b3JzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Shadman Sakib/source/repos/MusicLesson/Views/Tutors/Index.cshtml]
+[C:/Repo/MusicLesson/Views/Tutors/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHV0b3JzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Shadman Sakib/source/repos/MusicLesson/Views/_ViewImports.cshtml]
+[C:/Repo/MusicLesson/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Shadman Sakib/source/repos/MusicLesson/Views/_ViewStart.cshtml]
+[C:/Repo/MusicLesson/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Shadman Sakib/source/repos/MusicLesson/Views/Shared/_Layout.cshtml]
+[C:/Repo/MusicLesson/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-qfutnhptsr
