@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MusicLesson.Models;
 using Newtonsoft.Json;
+using SelectPdf;
 
 namespace MusicLesson.Controllers
 {
@@ -19,13 +21,13 @@ namespace MusicLesson.Controllers
             _context = context;
         }
 
-        // GET: Letters
+        
         public async Task<IActionResult> Index()
         {
               return View(await _context.Letters.ToListAsync());
         }
 
-        // GET: Letters/Details/5
+        
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null || _context.Letters == null)
@@ -54,7 +56,6 @@ namespace MusicLesson.Controllers
                 item.Letter = _context.Letters.SingleOrDefault(l => l.LetterID == item.LetterID);
                 item.Student = _context.Students.SingleOrDefault(l => l.StudentID == item.StudentID);
                 item.Tutor = _context.Tutors.SingleOrDefault(l => l.TutorID == item.TutorID);
-                
                
             }
             TempData["LessonDetails"] = JsonConvert.SerializeObject(lessons);
@@ -63,27 +64,64 @@ namespace MusicLesson.Controllers
         // GET: Letters/Create
         public IActionResult Create()
         {
+            var TermList = new List<int>();
+            TermList.Add(1);
+            TermList.Add(2);
+            TermList.Add(3);
+            TermList.Add(4);
+            ViewData["Term"] = TermList.ConvertAll(a =>
+            {
+                return new SelectListItem()
+                {
+                    Text = a.ToString(),
+                    Value = a.ToString(),
+                    Selected = false
+                };
+            });
+
+            var SemesterList = new List<int>();
+            TermList.Add(1);
+            TermList.Add(2);
+
+            ViewData["SemesterList"] = SemesterList.ConvertAll(a =>
+            {
+                return new SelectListItem()
+                {
+                    Text = a.ToString(),
+                    Value = a.ToString(),
+                    Selected = false
+                };
+            });
             return View();
         }
+        [HttpGet]
+        public IActionResult LetterDemo([Bind("LetterID,Reference,PaymentStatus,BeginningComment,Signature,BankAccount,BSB,AccountNo,TotalCost,Term,Semester,Year,StudentID")] Letters letter)
+        {
+            //var LessonList = JsonConvert.DeserializeObject<List<Lessons>>(TempData["LessonDetails"].ToString());
+            letter.student = _context.Students.Find(letter.StudentID);
+            //var data = JsonConvert.DeserializeObject(TempData["LessonDetails"]);
+            return View(letter);
+        }
 
-        // POST: Letters/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("LetterID,Reference,PaymentStatus,BeginningComment,Signature,BankAccount,BSB,AccountNo,TotalCost")] Letters letters)
+        public async Task<IActionResult> Create([Bind("LetterID,Reference,PaymentStatus,BeginningComment,Signature,BankAccount,BSB,AccountNo,TotalCost,Term,Semester,Year,StudentID")] Letters letters)
         {
             letters.Reference = "default";
-            if (ModelState.IsValid)
+            var lessons = await _context.Lessons.Where(a => a.StudentID == letters.StudentID).ToListAsync();
+            _context.Add(letters);
+            await _context.SaveChangesAsync();
+            var student = _context.Students.Find(letters.StudentID);
+            letters.Reference = letters.Year + student.LastName + letters.LetterID;
+            _context.Update(letters);
+            foreach (var item in lessons)
             {
-                var firstLesson = letters.Lessons.FirstOrDefault();
-                _context.Add(letters);
-                _context.UpdateRange(letters.Lessons);
-                letters.Reference = firstLesson.Year + firstLesson.Student.LastName + firstLesson.LessonID;
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                item.LetterID = letters.LetterID;
+                _context.Update(item);
             }
-            return View(letters);
+            await _context.SaveChangesAsync();
+            letters.TermStartDate = (await _context.Lessons.FirstOrDefaultAsync(a => a.LessonID == lessons[0].LessonID && a.StudentID == lessons[0].StudentID)).TermStartDate;
+
+            return RedirectToAction("LetterDemo", letters);
         }
 
         // GET: Letters/Edit/5
@@ -102,12 +140,10 @@ namespace MusicLesson.Controllers
             return View(letters);
         }
 
-        // POST: Letters/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("LetterID,Reference,PaymentStatus,BeginningComment,Signature,BankAccount,BSB,AccountNo,TotalCost")] Letters letters)
+        public async Task<IActionResult> Edit(int id, [Bind("LetterID,Reference,PaymentStatus,BeginningComment,Signature,BankAccount,BSB,AccountNo,TotalCost,Term,Semester,Year,StudentID")] Letters letters)
         {
             if (id != letters.LetterID)
             {

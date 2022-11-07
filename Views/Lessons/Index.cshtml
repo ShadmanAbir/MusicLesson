@@ -38,7 +38,11 @@
         {
             <tr>
                 <td>
-                    @Html.DisplayFor(modelItem => item.LessonDateTime)
+                    @{
+                        var datetime = item.LessonDateTime.ToLongDateString() +" " +item.LessonDateTime.ToLongTimeString();
+                        @Html.DisplayFor(modelItem => datetime);
+                    }
+                    
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Duration.Length)
@@ -52,7 +56,7 @@
                 <td>
                     @{
                         var Name = item.Student.FirstName + " " + item.Student.LastName;
-                        @Html.DisplayFor(modelItem => Name)
+                            @Html.DisplayFor(modelItem => Name)
                     }
 
                 </td>

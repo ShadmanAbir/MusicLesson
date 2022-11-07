@@ -72,9 +72,9 @@ namespace MusicLesson.Controllers
         // GET: Lessons/Create
         public async Task<IActionResult> CreateAsync()
         {
-            ViewData["DurationID"] = new SelectList(_context.Duration, "DurationID", "Length");
-            ViewData["InstrumentID"] = new SelectList(_context.Instrument, "InstrumentID", "InstrumentName");
-            ViewData["LetterID"] = new SelectList(_context.Letters, "LetterID", "AccountNo");
+            ViewData["DurationID"] = new SelectList(_context.Duration, "DurationID", "Length","Select Duration");
+            ViewData["InstrumentID"] = new SelectList(_context.Instrument, "InstrumentID", "InstrumentName", "Select Instrument");
+            ViewData["LetterID"] = new SelectList(_context.Letters, "LetterID", "AccountNo" , "Select Letter");
             var data = new SelectList(_context.Students, "StudentID", "FirstName");
             foreach (var item in data)
             {
@@ -85,9 +85,6 @@ namespace MusicLesson.Controllers
             return View();
         }
 
-        // POST: Lessons/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("LessonID,StudentID,InstrumentID,TutorID,DurationID,LessonDateTime,LetterID,Term,Semester,Year,TermStartDate")] Lessons lessons)
@@ -127,9 +124,6 @@ namespace MusicLesson.Controllers
             return View(lessons);
         }
 
-        // POST: Lessons/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("LessonID,StudentID,InstrumentID,TutorID,DurationID,LessonDateTime,LetterID,Term,Semester,Year,TermStartDate")] Lessons lessons)

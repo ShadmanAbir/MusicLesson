@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "w5eA8fPsMdbiMzz9KHX8GszGLj0+wva0x1r7gJoVIM4BExsfkbjEb13/zqK5wmqlWRT632On32ihofZLsPkPLw==",
+  "dgSpecHash": "obPVJurkAZT6d96F2w+2Sh2QFNaJPzRA+auDzYRSybNFAZFrcfMtKHCL36+rBET/OUdty/KaQFiBzOss1ZQOgw==",
   "success": true,
   "projectFilePath": "C:\\Repo\\MusicLesson\\MusicLesson.csproj",
   "expectedPackageFiles": [
@@ -95,8 +95,10 @@
     "C:\\Users\\Shadman Sakib\\.nuget\\packages\\runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\Shadman Sakib\\.nuget\\packages\\runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\Shadman Sakib\\.nuget\\packages\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
+    "C:\\Users\\Shadman Sakib\\.nuget\\packages\\select.htmltopdf\\22.1.0\\select.htmltopdf.22.1.0.nupkg.sha512",
+    "C:\\Users\\Shadman Sakib\\.nuget\\packages\\select.htmltopdf.netcore\\22.1.0\\select.htmltopdf.netcore.22.1.0.nupkg.sha512",
     "C:\\Users\\Shadman Sakib\\.nuget\\packages\\system.appcontext\\4.3.0\\system.appcontext.4.3.0.nupkg.sha512",
-    "C:\\Users\\Shadman Sakib\\.nuget\\packages\\system.buffers\\4.3.0\\system.buffers.4.3.0.nupkg.sha512",
+    "C:\\Users\\Shadman Sakib\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
     "C:\\Users\\Shadman Sakib\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
     "C:\\Users\\Shadman Sakib\\.nuget\\packages\\system.collections.concurrent\\4.3.0\\system.collections.concurrent.4.3.0.nupkg.sha512",
     "C:\\Users\\Shadman Sakib\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",
@@ -130,6 +132,7 @@
     "C:\\Users\\Shadman Sakib\\.nuget\\packages\\system.net.http\\4.3.0\\system.net.http.4.3.0.nupkg.sha512",
     "C:\\Users\\Shadman Sakib\\.nuget\\packages\\system.net.primitives\\4.3.0\\system.net.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\Shadman Sakib\\.nuget\\packages\\system.net.sockets\\4.3.0\\system.net.sockets.4.3.0.nupkg.sha512",
+    "C:\\Users\\Shadman Sakib\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\Shadman Sakib\\.nuget\\packages\\system.objectmodel\\4.3.0\\system.objectmodel.4.3.0.nupkg.sha512",
     "C:\\Users\\Shadman Sakib\\.nuget\\packages\\system.private.uri\\4.3.2\\system.private.uri.4.3.2.nupkg.sha512",
     "C:\\Users\\Shadman Sakib\\.nuget\\packages\\system.reflection\\4.3.0\\system.reflection.4.3.0.nupkg.sha512",
@@ -173,7 +176,11 @@
     "C:\\Users\\Shadman Sakib\\.nuget\\packages\\system.threading.timer\\4.3.0\\system.threading.timer.4.3.0.nupkg.sha512",
     "C:\\Users\\Shadman Sakib\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
     "C:\\Users\\Shadman Sakib\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
-    "C:\\Users\\Shadman Sakib\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512"
+    "C:\\Users\\Shadman Sakib\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
+    "C:\\Users\\Shadman Sakib\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.9\\microsoft.netcore.app.host.win-x64.6.0.9.nupkg.sha512",
+    "C:\\Users\\Shadman Sakib\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.9\\microsoft.aspnetcore.app.ref.6.0.9.nupkg.sha512",
+    "C:\\Users\\Shadman Sakib\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.9\\microsoft.windowsdesktop.app.ref.6.0.9.nupkg.sha512",
+    "C:\\Users\\Shadman Sakib\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.9\\microsoft.netcore.app.ref.6.0.9.nupkg.sha512"
   ],
   "logs": []
 }

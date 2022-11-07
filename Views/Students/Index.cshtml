@@ -43,7 +43,11 @@
                 @Html.DisplayFor(modelItem => item.LastName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.DOB)
+                    @{
+                        var dob = item.DOB.ToLongDateString();
+                        @Html.DisplayFor(modelItem => dob)
+                }
+                
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Guardian)

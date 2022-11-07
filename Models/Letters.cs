@@ -42,6 +42,15 @@ public partial class Letters
     [Column(TypeName = "decimal(18, 0)")]
     public decimal TotalCost { get; set; }
 
+    public int Term { get; set; }
+    public int Semester { get; set; }
+    public int Year { get; set; }
+
     [InverseProperty("Letter")]
     public virtual ICollection<Lessons> Lessons { get; } = new List<Lessons>();
+    [NotMapped]
+    public virtual Students student { get; set; }
+    public int StudentID { get; set; }
+    [NotMapped]
+    public DateTime TermStartDate { get; set; }
 }

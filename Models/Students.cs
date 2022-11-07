@@ -23,7 +23,7 @@ public partial class Students
     [Unicode(false)]
     public string LastName { get; set; }
 
-    [Column(TypeName = "date")]
+    [DataType(DataType.Date)]
     public DateTime DOB { get; set; }
 
     [Required]

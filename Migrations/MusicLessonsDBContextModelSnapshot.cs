@@ -178,6 +178,9 @@ namespace MusicLesson.Migrations
                         .HasColumnType("varchar(500)")
                         .HasColumnOrder(1);
 
+                    b.Property<int>("Semester")
+                        .HasColumnType("int");
+
                     b.Property<string>("Signature")
                         .IsRequired()
                         .HasMaxLength(10)
@@ -185,9 +188,18 @@ namespace MusicLesson.Migrations
                         .HasColumnType("varchar(10)")
                         .HasColumnOrder(4);
 
+                    b.Property<int>("StudentID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Term")
+                        .HasColumnType("int");
+
                     b.Property<decimal>("TotalCost")
                         .HasColumnType("decimal(18,0)")
                         .HasColumnOrder(12);
+
+                    b.Property<int>("Year")
+                        .HasColumnType("int");
 
                     b.HasKey("LetterID");
 
@@ -204,7 +216,7 @@ namespace MusicLesson.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("StudentID"), 1L, 1);
 
                     b.Property<DateTime>("DOB")
-                        .HasColumnType("date")
+                        .HasColumnType("datetime2")
                         .HasColumnOrder(3);
 
                     b.Property<string>("Email")
