@@ -16,13 +16,17 @@
         Student: @Html.DisplayFor(a => a.student.FirstName) &nbsp; @Html.DisplayFor(a => a.student.LastName) <br/>
         Amount: $@Html.DisplayFor(a => a.TotalCost) <br/>
         Alternatively pay via Bank Transfer - EFT - CDU bank details, delete old bank details:<br/>
+        <br/>
         New Bank details <br/>
         Bank: @Html.DisplayFor(a => a.BankAccount) <br/>
         Account Name: @Html.DisplayFor(a => a.BankAccount) <br/>
         BSB Number: @Html.DisplayFor(a => a.BSB) <br/>
         Account Number: @Html.DisplayFor(a => a.AccountNo) <br/>
-        Reference number – please include ‘CYCM, Reference number and student name’
+        Reference number: – @Html.DisplayFor(a => a.Reference)
+        <br />
         The CYCM is committed to providing students with quality lessons in a positive learning environment.
-        Regards
+        <br/>
+        Regards,<br/>
+
     </dl>
 </div>

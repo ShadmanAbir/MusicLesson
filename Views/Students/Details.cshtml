@@ -28,6 +28,15 @@
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.DOB)
         </dd>
+        <dt class="col-sm-2">
+            @Html.Label("Age")
+        </dt>
+        <dd class="col-sm-10">
+            @{
+                var age = (DateTime.Now.Year - Model.DOB.Year) + " years";
+                @Html.DisplayFor(modelItem => age)
+            }
+        </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Guardian)
         </dt>

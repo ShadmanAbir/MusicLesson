@@ -26,6 +26,9 @@
                     @Html.DisplayNameFor(model => model[0].Term)
                 </th>
                 <th>
+                    @Html.DisplayNameFor(model => model[0].Semester)
+                </th>
+                <th>
                     @Html.DisplayNameFor(model => model[0].Year)
                 </th>
                 <th>
@@ -99,7 +102,7 @@
                             var PaymentStatus = "Not Paid";
                             if (Model[i].LetterID != null)
                             {
-                                if (Model[i].Letter.PaymentStatus)
+                                if (Model[i].Letter.PaymentStatus == true)
                                     PaymentStatus = "Paid";
                             }
                             @Html.DisplayFor(modelItem => PaymentStatus)

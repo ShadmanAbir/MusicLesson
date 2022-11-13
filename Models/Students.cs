@@ -33,6 +33,7 @@ public partial class Students
 
     [Required]
     [StringLength(100)]
+    [EmailAddress]
     public string Email { get; set; }
 
     [Required]

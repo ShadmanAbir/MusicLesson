@@ -22,6 +22,9 @@
                 @Html.DisplayNameFor(model => model.DOB)
             </th>
             <th>
+                Age
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.Guardian)
             </th>
             <th>
@@ -46,9 +49,16 @@
                     @{
                         var dob = item.DOB.ToLongDateString();
                         @Html.DisplayFor(modelItem => dob)
-                }
+                     }
                 
             </td>
+                <td>
+                    @{
+                        var age =(DateTime.Now.Year - item.DOB.Year) + " years";
+                        @Html.DisplayFor(modelItem => age)
+                    }
+
+                </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Guardian)
             </td>

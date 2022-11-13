@@ -37,6 +37,7 @@ namespace MusicLesson.Controllers
 
             var letters = await _context.Letters
                 .FirstOrDefaultAsync(m => m.LetterID == id);
+            letters.student = await _context.Students.FirstOrDefaultAsync(a => a.StudentID == letters.StudentID);
             if (letters == null)
             {
                 return NotFound();

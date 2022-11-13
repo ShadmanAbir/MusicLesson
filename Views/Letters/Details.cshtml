@@ -1,66 +1,46 @@
 ﻿@model MusicLesson.Models.Letters
 
-@{
-    ViewData["Title"] = "Details";
-}
-
-<h1>Details</h1>
-
 <div>
-    <h4>Letters</h4>
     <hr />
     <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Reference)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Reference)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.PaymentStatus)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.PaymentStatus)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.BeginningComment)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.BeginningComment)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Signature)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Signature)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.BankAccount)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.BankAccount)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.BSB)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.BSB)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.AccountNo)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.AccountNo)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.TotalCost)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.TotalCost)
-        </dd>
+        Dear @Html.DisplayFor(a => a.student.FirstName),
+        <br />
+        @Html.DisplayFor(model => model.BeginningComment)
+        <br />
+        Welcome to all existing students and new students. Term @Html.DisplayFor(a => a.Term) will commence on @Html.DisplayFor(a => a.TermStartDate)
+        Please ensure your payment is finalised by @Html.DisplayFor(a => a.TermStartDate) If a student is no longer attending
+        lessons, please email the CYCM to be removed off the email list.
+        <br />
+        If paying by Bank Transfer- EFT, please forward a copy of your payment to the office, to follow up
+        and allocate to the student.
+        <br />
+        PAYMENT DETAILS:
+        <br />
+        Ref#: @Html.DisplayFor(a => a.Reference)
+        <br />
+        Student: @Html.DisplayFor(a => a.student.FirstName) &nbsp; @Html.DisplayFor(a => a.student.LastName)
+        <br />
+        Amount: $@Html.DisplayFor(a => a.TotalCost)
+        <br />
+        Alternatively pay via Bank Transfer - EFT - CDU bank details, delete old bank details:
+        <br />
+        <br />
+        New Bank details
+        <br />
+        Bank: @Html.DisplayFor(a => a.BankAccount)
+        <br />
+        Account Name: @Html.DisplayFor(a => a.BankAccount)
+        <br />
+        BSB Number: @Html.DisplayFor(a => a.BSB)
+        <br />
+        Account Number: @Html.DisplayFor(a => a.AccountNo)
+        <br />
+        Reference number: – @Html.DisplayFor(a => a.Reference)
+        <br />
+        The CYCM is committed to providing students with quality lessons in a positive learning environment.
+        <br />
+        Regards,
+        <br />
+
     </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.LetterID">Edit</a> |
-    <a asp-action="Index">Back to List</a>
 </div>
